@@ -425,4 +425,55 @@ model: sonnet  # or opus, haiku, inherit
 
 ### Tools
 - [SubAgents Directory](https://subagents.app)
-- [Skills Marketplace](https://skillsmp.com)
+- [Skills Marketplace](https://skills.sh) (also skillsmp.com)
+
+---
+
+## 8. Skills Collection
+
+Skills are reusable capabilities that extend Claude Code with specialized procedural knowledge.
+
+### Included Skills (catalog/skills/)
+
+#### Vercel Skills
+| Skill | Installs | Description |
+|-------|----------|-------------|
+| **react-best-practices** | 24.9K | 40+ React/Next.js performance rules from Vercel Engineering |
+| **web-design-guidelines** | 18.7K | Web design patterns and accessibility |
+
+#### Anthropic Skills
+| Skill | Description |
+|-------|-------------|
+| **skill-creator** | Meta-skill for creating custom skills |
+| **mcp-builder** | Guide for building MCP servers (Python/TypeScript) |
+| **webapp-testing** | Web application testing workflows |
+
+### Installation
+
+Skills can be installed globally or per-project:
+
+```bash
+# Global installation
+cp -r catalog/skills/vercel/react-best-practices ~/.claude/skills/
+
+# Project-specific
+cp -r catalog/skills/anthropic/mcp-builder /path/to/project/.claude/skills/
+```
+
+### External Skills Sources
+
+| Source | URL | Description |
+|--------|-----|-------------|
+| Vercel Skills | github.com/vercel-labs/agent-skills | Official Vercel skills |
+| Anthropic Skills | github.com/anthropics/skills | Official Anthropic skills |
+| Skills Marketplace | skills.sh | Community skill directory |
+
+### Creating Custom Skills
+
+Use the `skill-creator` skill from Anthropic to create custom skills:
+
+1. Understand the skill with concrete examples
+2. Plan reusable contents (scripts, references, assets)
+3. Initialize with `init_skill.py`
+4. Write SKILL.md with clear frontmatter
+5. Package with `package_skill.py`
