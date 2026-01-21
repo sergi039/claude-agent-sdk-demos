@@ -10,6 +10,7 @@ Last updated: 2026-01-21
 
 | Category | Top Resource | URL |
 |----------|--------------|-----|
+| **All-in-One** | everything-claude-code | [github.com/affaan-m/everything-claude-code](https://github.com/affaan-m/everything-claude-code) |
 | **Awesome Lists** | awesome-claude-code | [github.com/hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) |
 | **Skills** | Skills Marketplace | [skills.sh](https://skills.sh) |
 | **MCP Servers** | Smithery | [smithery.ai](https://smithery.ai/) |
@@ -30,6 +31,20 @@ Last updated: 2026-01-21
 | **ComposioHQ/awesome-claude-skills** | 21K | Skills & workflow customization | [GitHub](https://github.com/ComposioHQ/awesome-claude-skills) |
 | **travisvn/awesome-claude-skills** | - | Skills architecture patterns | [GitHub](https://github.com/travisvn/awesome-claude-skills) |
 | **vincenthopf/claude-code** | - | Commands, CLAUDE.md, workflows | [GitHub](https://github.com/vincenthopf/claude-code) |
+
+### Complete Configuration Bundles
+
+| Repository | Stars | Description | URL |
+|------------|-------|-------------|-----|
+| **affaan-m/everything-claude-code** | 10.2K | Anthropic hackathon winner. All-in-one: agents, skills, commands, rules, hooks, MCP configs. 10+ months of production use. | [GitHub](https://github.com/affaan-m/everything-claude-code) |
+
+**everything-claude-code** содержит:
+- **Agents**: planner, architect, code-reviewer, security-reviewer, e2e-runner
+- **Skills**: coding standards, backend/frontend patterns, TDD methodology
+- **Commands**: /tdd, /plan, /e2e, /code-review, /build-fix
+- **Rules**: security, coding style, testing, git workflows
+- **Hooks**: PreToolUse, PostToolUse, Stop hooks
+- **MCP Configs**: GitHub, Supabase, Vercel, Railway
 
 ### Subagent Collections
 
