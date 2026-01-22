@@ -1,0 +1,76 @@
+# {{PROJECT_NAME}}
+
+## Project Overview
+
+{{PROJECT_DESCRIPTION}}
+
+**Tech Stack:** {{TECH_STACK}}
+
+---
+
+## Agent Dispatch Protocol
+
+This project uses Claude Code agents from the catalog.
+
+### Quick Start
+
+For any complex task, start with the agent-organizer:
+```
+"Use agent-organizer to help me with [task]"
+```
+
+### Available Agents
+
+| Agent | Use For |
+|-------|---------|
+{{AGENTS_TABLE}}
+
+### Direct Agent Usage
+
+For specific tasks, call agents directly:
+```
+"Use python-pro to refactor the auth module"
+"Use code-reviewer to review my changes"
+"Use security-auditor to check for vulnerabilities"
+```
+
+---
+
+## Code Standards
+
+{{CODE_STANDARDS}}
+
+---
+
+## Common Commands
+
+```bash
+# Development
+{{DEV_COMMANDS}}
+
+# Testing
+{{TEST_COMMANDS}}
+
+# Linting
+{{LINT_COMMANDS}}
+```
+
+---
+
+## Project Structure
+
+```
+{{PROJECT_STRUCTURE}}
+```
+
+---
+
+## Important Notes
+
+{{IMPORTANT_NOTES}}
+
+---
+
+*Managed by Claude Agents Catalog*
+*Profile: {{PROFILE_NAME}}*
+*Last updated: {{LAST_UPDATED}}*

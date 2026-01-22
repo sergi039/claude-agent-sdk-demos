@@ -1,0 +1,64 @@
+name: trading-fintech
+description: Trading bots and financial applications
+version: "1.0"
+
+tech_patterns:
+  indicators:
+    - ccxt
+    - alpaca
+    - polygon
+    - binance
+    - kalshi
+    - polymarket
+    - trading
+    - arbitrage
+
+agents:
+  core:
+    - python-pro
+    - security-auditor      # CRITICAL for trading
+    - fintech-security      # specialized financial security
+    - code-reviewer
+    - test-automator
+  optional:
+    - database-optimizer
+    - backend-architect
+
+skills:
+  - backend-patterns
+  - coding-standards
+
+hooks:
+  PreToolUse:
+    - matcher: "Write|Edit"
+      command: "python ~/.claude/scripts/check-secrets.py {file}"
+  PostToolUse:
+    - matcher: "Edit|Write"
+      glob: "*.py"
+      command: "ruff check --fix {file} 2>/dev/null || true"
+
+rules:
+  - NEVER store API keys or secrets in code
+  - ALWAYS validate trading amounts and prices
+  - REQUIRE confirmation for any live trading operations
+  - Log all trading decisions with timestamps
+  - Implement rate limiting for all API calls
+  - Use decimal types for financial calculations, NEVER float
+
+organizer_context: |
+  This is a TRADING/FINTECH application.
+
+  ⚠️ CRITICAL: Security is PARAMOUNT.
+
+  Key concerns:
+  - API key security (env vars only)
+  - Input validation (amounts, prices)
+  - Rate limiting (exchange APIs)
+  - Decimal precision (no floats!)
+  - Audit logging (all trades)
+
+  Before ANY code change:
+  1. Check for hardcoded secrets
+  2. Validate financial calculations
+  3. Consider edge cases (negative amounts, overflow)
+  4. Review error handling for API failures

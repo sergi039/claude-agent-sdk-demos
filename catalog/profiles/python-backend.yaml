@@ -1,0 +1,58 @@
+name: python-backend
+description: Python backend services with API and database
+version: "1.0"
+
+tech_patterns:
+  required_any:
+    - requirements.txt
+    - pyproject.toml
+    - setup.py
+  indicators:
+    - fastapi
+    - flask
+    - django
+    - sqlalchemy
+    - psycopg
+    - asyncpg
+
+agents:
+  core:
+    - python-pro
+    - backend-architect
+    - code-reviewer
+    - test-automator
+  optional:
+    - database-optimizer    # if: postgresql/mysql detected
+    - security-auditor      # if: auth/api keys detected
+    - api-documenter        # if: openapi/swagger detected
+
+skills:
+  - backend-patterns
+  - coding-standards
+
+hooks:
+  PostToolUse:
+    - matcher: "Edit|Write"
+      glob: "*.py"
+      command: "ruff check --fix {file} 2>/dev/null || true"
+
+rules:
+  - Use type hints for all function signatures
+  - Prefer async/await for I/O operations
+  - Write docstrings for public functions
+  - Handle exceptions explicitly
+
+organizer_context: |
+  This is a Python backend project.
+
+  Key patterns:
+  - FastAPI/Flask for APIs
+  - SQLAlchemy/asyncpg for database
+  - Pydantic for validation
+  - async/await for I/O
+
+  Focus on:
+  - Type hints everywhere
+  - Proper error handling
+  - API design best practices
+  - Database query optimization

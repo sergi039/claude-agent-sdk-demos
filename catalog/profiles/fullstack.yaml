@@ -1,0 +1,65 @@
+name: fullstack
+description: Full-stack applications with frontend and backend
+version: "1.0"
+
+tech_patterns:
+  required_all:
+    - package.json
+  indicators:
+    - next
+    - react
+    - prisma
+    - drizzle
+    - trpc
+
+agents:
+  core:
+    - nextjs-pro
+    - typescript-pro
+    - backend-architect
+    - database-optimizer
+    - code-reviewer
+  optional:
+    - react-pro
+    - security-auditor
+    - test-automator
+    - api-documenter
+
+skills:
+  - react-best-practices
+  - frontend-patterns
+  - backend-patterns
+  - coding-standards
+
+hooks:
+  PostToolUse:
+    - matcher: "Edit|Write"
+      glob: "*.{ts,tsx}"
+      command: "npx eslint --fix {file} 2>/dev/null || true"
+
+rules:
+  - Use TypeScript strict mode
+  - Validate all API inputs with Zod/Yup
+  - Use server actions for mutations
+  - Implement proper error boundaries
+  - Follow RESTful or tRPC conventions consistently
+
+organizer_context: |
+  This is a full-stack application.
+
+  Key patterns:
+  - Next.js App Router
+  - TypeScript throughout
+  - Prisma/Drizzle for database
+  - tRPC or REST API
+
+  Architecture:
+  - Frontend: React Server Components + Client where needed
+  - Backend: API routes or server actions
+  - Database: PostgreSQL with ORM
+
+  Focus on:
+  - End-to-end type safety
+  - Proper data validation
+  - Optimistic updates
+  - Error handling at all layers

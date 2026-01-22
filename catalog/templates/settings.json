@@ -1,0 +1,35 @@
+{
+  "$schema": "https://code.claude.com/schemas/settings.json",
+  "description": "Standard settings template for catalog-managed projects",
+  "permissions": {
+    "defaultMode": "default",
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(pnpm *)",
+      "Bash(yarn *)",
+      "Bash(pytest *)",
+      "Bash(python -m pytest *)",
+      "Bash(ruff *)",
+      "Bash(eslint *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git branch *)",
+      "Bash(gh issue *)",
+      "Bash(gh pr *)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(sudo *)",
+      "Bash(* > /dev/*)",
+      "Write(*.env*)",
+      "Write(*secret*)",
+      "Write(*credential*)"
+    ]
+  },
+  "preferences": {
+    "autoCompact": true,
+    "compactThreshold": 0.7,
+    "verboseMode": false
+  }
+}

@@ -1,0 +1,55 @@
+name: nextjs-frontend
+description: Next.js applications with React and TypeScript
+version: "1.0"
+
+tech_patterns:
+  required_any:
+    - next.config.js
+    - next.config.mjs
+    - next.config.ts
+  indicators:
+    - next
+    - react
+    - typescript
+
+agents:
+  core:
+    - nextjs-pro
+    - react-pro
+    - typescript-pro
+    - code-reviewer
+  optional:
+    - test-automator        # if: jest/vitest detected
+    - api-documenter        # if: /api routes exist
+
+skills:
+  - react-best-practices
+  - frontend-patterns
+  - web-design-guidelines
+
+hooks:
+  PostToolUse:
+    - matcher: "Edit|Write"
+      glob: "*.{ts,tsx}"
+      command: "npx eslint --fix {file} 2>/dev/null || true"
+
+rules:
+  - Use TypeScript strict mode
+  - Prefer Server Components where possible
+  - Use named exports, not default exports
+  - Colocate components with their styles
+
+organizer_context: |
+  This is a Next.js application with React.
+
+  Key patterns:
+  - App Router (Next.js 13+)
+  - Server Components by default
+  - Client Components only when needed
+  - TypeScript strict mode
+
+  Focus on:
+  - Performance optimization
+  - Proper data fetching patterns
+  - Type safety
+  - Accessibility

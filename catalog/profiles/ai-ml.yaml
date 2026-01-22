@@ -1,0 +1,60 @@
+name: ai-ml
+description: AI/ML projects with LLM integration
+version: "1.0"
+
+tech_patterns:
+  indicators:
+    - anthropic
+    - openai
+    - langchain
+    - transformers
+    - huggingface
+    - llm
+    - embedding
+    - vector
+
+agents:
+  core:
+    - ai-engineer
+    - prompt-engineer
+    - python-pro
+    - code-reviewer
+  optional:
+    - data-engineer         # if: pandas/spark detected
+    - database-optimizer    # if: vector db detected
+    - test-automator
+
+skills:
+  - coding-standards
+  - backend-patterns
+
+hooks:
+  PostToolUse:
+    - matcher: "Edit|Write"
+      glob: "*.py"
+      command: "ruff check --fix {file} 2>/dev/null || true"
+
+rules:
+  - Store API keys in environment variables
+  - Implement proper error handling for API calls
+  - Cache API responses when appropriate
+  - Monitor token usage and costs
+  - Use streaming for long responses
+  - Implement retry logic with exponential backoff
+
+organizer_context: |
+  This is an AI/ML project with LLM integration.
+
+  Key patterns:
+  - Claude/OpenAI API integration
+  - Prompt engineering
+  - Token optimization
+  - Streaming responses
+  - Error handling for API failures
+
+  Focus on:
+  - Prompt clarity and efficiency
+  - Token cost optimization
+  - Proper error handling
+  - Response parsing and validation
+  - Caching strategies

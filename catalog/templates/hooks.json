@@ -1,0 +1,62 @@
+{
+  "$schema": "https://code.claude.com/schemas/hooks.json",
+  "description": "Standard hooks template for catalog-managed projects",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '📊 Session started for project: '$(basename $(pwd))",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import sys, json; data=json.load(sys.stdin); path=data.get('tool_input',{}).get('file_path',''); print('⚠️ Protected file!' if any(x in path for x in ['.env', 'secret', 'credential', '.key']) else '', end=''); sys.exit(2 if any(x in path for x in ['.env', 'secret', 'credential', '.key']) else 0)\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash(pytest*|python -m pytest*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🧪 Test execution completed'",
+            "timeout": 5
+          }
+        ]
+      },
+      {
+        "matcher": "Bash(npm test*|pnpm test*|yarn test*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '🧪 Test execution completed'",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '✅ Task completed'",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
