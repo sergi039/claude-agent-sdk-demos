@@ -16,8 +16,9 @@ tech_patterns:
 agents:
   core:
     - python-pro
-    - security-auditor      # CRITICAL for trading
-    - fintech-security      # specialized financial security
+    - trading-bot-specialist  # specialized for trading bots
+    - security-auditor        # CRITICAL for trading
+    - fintech-security        # specialized financial security
     - code-reviewer
     - test-automator
   optional:

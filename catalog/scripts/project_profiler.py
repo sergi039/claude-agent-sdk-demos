@@ -47,6 +47,11 @@ def read_dependencies(project_path: Path) -> set:
                 pkg = line.split("==")[0].split(">=")[0].split("<=")[0].split("[")[0].strip()
                 if pkg:
                     deps.add(pkg)
+                    # Also add normalized names (py-clob-client -> clob, polymarket)
+                    if "clob" in pkg or "polymarket" in pkg:
+                        deps.add("polymarket")
+                    if "kalshi" in pkg:
+                        deps.add("kalshi")
 
     # Python: pyproject.toml
     pyproject = project_path / "pyproject.toml"
@@ -55,7 +60,8 @@ def read_dependencies(project_path: Path) -> set:
         deps.add("__pyproject__")
         # Simple extraction of common packages
         for pkg in ["fastapi", "flask", "django", "sqlalchemy", "anthropic", "openai",
-                    "langchain", "pytest", "ccxt", "alpaca", "telethon", "streamlit"]:
+                    "langchain", "pytest", "ccxt", "alpaca", "telethon", "streamlit",
+                    "polymarket", "kalshi", "binance", "trading"]:
             if pkg in content:
                 deps.add(pkg)
 
@@ -70,6 +76,31 @@ def read_dependencies(project_path: Path) -> set:
             pass
 
     return deps
+
+
+def scan_source_for_trading_indicators(project_path: Path) -> set:
+    """Scan source files for trading-related keywords."""
+    indicators = set()
+
+    trading_keywords = {
+        "polymarket": ["polymarket", "clob", "condition_id", "token_id"],
+        "kalshi": ["kalshi", "kalshi_", "trade-api"],
+        "arbitrage": ["arbitrage", "edge", "kelly", "position_size"],
+        "trading": ["buy_yes", "buy_no", "place_order", "execute_trade"],
+        "crypto": ["private_key", "wallet", "polygon", "ethereum"],
+    }
+
+    # Scan Python files
+    for py_file in list(project_path.rglob("*.py"))[:50]:  # Limit to 50 files
+        try:
+            content = py_file.read_text().lower()
+            for category, keywords in trading_keywords.items():
+                if any(kw in content for kw in keywords):
+                    indicators.add(category)
+        except (UnicodeDecodeError, PermissionError):
+            continue
+
+    return indicators
 
 
 def analyze_structure(project_path: Path) -> dict:
@@ -164,17 +195,23 @@ def analyze_project(project_path: Path) -> dict:
         if dep in deps:
             result["frameworks"].append(framework)
 
-    # Detect indicators
+    # Detect indicators from dependencies
     indicator_keywords = [
         "anthropic", "openai", "langchain", "llm", "embedding",
         "ccxt", "alpaca", "trading", "arbitrage", "kalshi", "polymarket",
         "sqlalchemy", "prisma", "drizzle", "postgresql", "mongodb",
-        "telethon", "telegram", "discord"
+        "telethon", "telegram", "discord", "binance", "crypto"
     ]
 
     for kw in indicator_keywords:
         if kw in deps or any(kw in str(d) for d in deps):
             result["indicators"].append(kw)
+
+    # Scan source code for trading indicators
+    source_indicators = scan_source_for_trading_indicators(project_path)
+    for ind in source_indicators:
+        if ind not in result["indicators"]:
+            result["indicators"].append(ind)
 
     # Analyze structure
     result["structure"] = analyze_structure(project_path)
@@ -223,10 +260,12 @@ def match_profiles(analysis: dict, profiles: dict) -> list:
                 score += 20
                 reasons.append("Python project")
         elif name == "trading-fintech":
-            trading_indicators = {"ccxt", "alpaca", "trading", "arbitrage", "kalshi", "polymarket"}
-            if indicators & trading_indicators:
-                score += 60
-                reasons.append("trading indicators")
+            trading_indicators = {"ccxt", "alpaca", "trading", "arbitrage", "kalshi", "polymarket", "crypto"}
+            matched_trading = indicators & trading_indicators
+            if matched_trading:
+                # Strong match for trading projects
+                score += 30 * len(matched_trading)
+                reasons.append(f"trading: {', '.join(matched_trading)}")
         elif name == "ai-ml":
             ai_indicators = {"anthropic", "openai", "langchain", "llm", "embedding"}
             if indicators & ai_indicators:
