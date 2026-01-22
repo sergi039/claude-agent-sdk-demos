@@ -285,11 +285,25 @@ Last updated: 2026-01-21
 
 | Resource | URL |
 |----------|-----|
+| **Claude Code Product** | [claude.com/product/claude-code](https://claude.com/product/claude-code) |
 | **Claude Code Docs** | [code.claude.com/docs](https://code.claude.com/docs/en) |
-| **Best Practices** | [anthropic.com/engineering/claude-code-best-practices](https://www.anthropic.com/engineering/claude-code-best-practices) |
-| **MCP Documentation** | [code.claude.com/docs/en/mcp](https://code.claude.com/docs/en/mcp) |
-| **Skills Documentation** | [code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills) |
+| **Best Practices** | [code.claude.com/docs/en/best-practices](https://code.claude.com/docs/en/best-practices) |
+| **Common Workflows** | [code.claude.com/docs/en/common-workflows](https://code.claude.com/docs/en/common-workflows) |
+| **Features Overview** | [code.claude.com/docs/en/features-overview](https://code.claude.com/docs/en/features-overview) |
+| **Memory Management** | [code.claude.com/docs/en/memory](https://code.claude.com/docs/en/memory) |
+| **Hooks Reference** | [code.claude.com/docs/en/hooks](https://code.claude.com/docs/en/hooks) |
+| **MCP Integration** | [code.claude.com/docs/en/mcp](https://code.claude.com/docs/en/mcp) |
+| **Sub-agents** | [code.claude.com/docs/en/sub-agents](https://code.claude.com/docs/en/sub-agents) |
+| **Skills** | [code.claude.com/docs/en/skills](https://code.claude.com/docs/en/skills) |
 | **Cost Management** | [code.claude.com/docs/en/costs](https://code.claude.com/docs/en/costs) |
+
+### Local Catalog Docs
+
+| Document | Description |
+|----------|-------------|
+| **[OFFICIAL-BEST-PRACTICES.md](./OFFICIAL-BEST-PRACTICES.md)** | Полный перевод официальных best practices |
+| **[SOURCES.md](./SOURCES.md)** | Каталог репозиториев агентов |
+| **[everything-claude-code/](./everything-claude-code/)** | Конфиги от Anthropic hackathon winner |
 
 ### Third-Party Guides
 
