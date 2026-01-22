@@ -16,18 +16,16 @@ tech_patterns:
 agents:
   core:
     - python-pro
-    - trading-bot-specialist  # specialized for trading bots
-    - security-auditor        # CRITICAL for trading
-    - fintech-security        # specialized financial security
+    - trading-bot-specialist    # specialized for trading bots
+    - security-auditor          # CRITICAL for trading
+    - fintech-security-expert   # specialized financial security
     - code-reviewer
     - test-automator
   optional:
     - database-optimizer
     - backend-architect
 
-skills:
-  - backend-patterns
-  - coding-standards
+skills: []  # No specific skills for trading yet
 
 hooks:
   PreToolUse:
