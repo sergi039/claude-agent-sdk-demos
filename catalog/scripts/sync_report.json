@@ -1,14 +1,97 @@
 {
-  "timestamp": "2026-01-22T09:00:05.424759",
-  "new_skills": [],
+  "timestamp": "2026-01-23T12:56:33.514448",
+  "new_skills": [
+    {
+      "source": "anthropic",
+      "name": "algorithmic-art",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art"
+    },
+    {
+      "source": "anthropic",
+      "name": "brand-guidelines",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines"
+    },
+    {
+      "source": "anthropic",
+      "name": "canvas-design",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/canvas-design"
+    },
+    {
+      "source": "anthropic",
+      "name": "doc-coauthoring",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring"
+    },
+    {
+      "source": "anthropic",
+      "name": "docx",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/docx"
+    },
+    {
+      "source": "anthropic",
+      "name": "frontend-design",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
+    },
+    {
+      "source": "anthropic",
+      "name": "internal-comms",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/internal-comms"
+    },
+    {
+      "source": "anthropic",
+      "name": "pdf",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/pdf"
+    },
+    {
+      "source": "anthropic",
+      "name": "pptx",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/pptx"
+    },
+    {
+      "source": "anthropic",
+      "name": "slack-gif-creator",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator"
+    },
+    {
+      "source": "anthropic",
+      "name": "theme-factory",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/theme-factory"
+    },
+    {
+      "source": "anthropic",
+      "name": "web-artifacts-builder",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder"
+    },
+    {
+      "source": "anthropic",
+      "name": "xlsx",
+      "repo": "anthropics/skills",
+      "url": "https://github.com/anthropics/skills/tree/main/skills/xlsx"
+    },
+    {
+      "source": "vercel",
+      "name": "claude.ai",
+      "repo": "vercel-labs/agent-skills",
+      "url": "https://github.com/vercel-labs/agent-skills/tree/main/skills/claude.ai"
+    }
+  ],
   "synced_repos": [
     {
       "repo": "affaan-m/everything-claude-code",
       "status": "synced",
-      "commit": "",
-      "changes": [
-        "README.md"
-      ]
+      "commit": "5230892",
+      "changes": []
     }
   ]
 }
