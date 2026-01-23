@@ -30,7 +30,6 @@
 ## Kanban
 
 ### TODO
-- [ ] Phase 2: Install selected agents to ~/.claude/agents/
 - [ ] Phase 2: Test agents on real tasks
 - [ ] Phase 3: Install shinpr/claude-code-workflows plugin
 - [ ] Phase 3: Test /implement command on one project
@@ -39,33 +38,35 @@
 - [ ] Phase 4: Customize prompts for personal style
 
 ### IN PROGRESS
-- [ ] Phase 1: Create catalog structure (SOURCES.md, folders)
-- [ ] Phase 1: Curate 10-15 key agents
+- [ ] Phase 2: Test agents on real tasks
 
 ### DONE
 - [x] Research agent ecosystem (100+ repos analyzed)
 - [x] Analyze personal projects and development patterns
 - [x] Design catalog structure
 - [x] Create project plan and kanban
+- [x] Phase 1: Create catalog structure (SOURCES.md, folders)
+- [x] Phase 1: Curate 10-15 key agents (19 agents curated)
+- [x] Phase 2: Install selected agents to ~/.claude/agents/ (19 agents installed)
 
 ---
 
 ## Phases
 
-### Phase 1: Create Catalog (Current)
-**Status:** In Progress
+### Phase 1: Create Catalog
+**Status:** Complete ✅
 
 Tasks:
-1. Create repository structure
-2. Add SOURCES.md with all discovered repos
-3. Select 10-15 key agents for personal projects
-4. Document each agent's purpose and source
+1. ✅ Create repository structure
+2. ✅ Add SOURCES.md with all discovered repos
+3. ✅ Select 10-15 key agents for personal projects (19 agents)
+4. ✅ Document each agent's purpose and source
 
 ### Phase 2: Initial Installation
-**Status:** Pending
+**Status:** In Progress (Installation Complete)
 
 Tasks:
-1. Copy selected agents to ~/.claude/agents/
+1. ✅ Copy selected agents to ~/.claude/agents/ (19 agents installed)
 2. Test on real development tasks
 3. Iterate based on results
 
@@ -138,4 +139,4 @@ Tasks:
 
 ---
 
-*Last updated: 2025-01-20*
+*Last updated: 2026-01-23*
