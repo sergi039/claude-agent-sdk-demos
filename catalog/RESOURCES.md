@@ -2,7 +2,7 @@
 
 Comprehensive guide to resources, tools, and communities for optimizing Claude Code workflow.
 
-Last updated: 2026-01-21
+Last updated: 2026-01-23
 
 ---
 
@@ -39,11 +39,11 @@ Last updated: 2026-01-21
 | **affaan-m/everything-claude-code** | 10.2K | Anthropic hackathon winner. All-in-one: agents, skills, commands, rules, hooks, MCP configs. 10+ months of production use. | [GitHub](https://github.com/affaan-m/everything-claude-code) |
 
 **everything-claude-code** содержит:
-- **Agents**: planner, architect, code-reviewer, security-reviewer, e2e-runner
-- **Skills**: coding standards, backend/frontend patterns, TDD methodology
-- **Commands**: /tdd, /plan, /e2e, /code-review, /build-fix
+- **Agents** (9): planner, architect, code-reviewer, security-reviewer, e2e-runner, build-error-resolver, doc-updater, refactor-cleaner, tdd-guide
+- **Skills** (9): coding-standards, backend/frontend-patterns, clickhouse-io, continuous-learning, eval-harness, strategic-compact, verification-loop
+- **Commands** (15): /tdd, /plan, /e2e, /code-review, /build-fix, /checkpoint, /eval, /orchestrate, /setup-pm, /verify, и др.
 - **Rules**: security, coding style, testing, git workflows
-- **Hooks**: PreToolUse, PostToolUse, Stop hooks
+- **Hooks**: PreToolUse, PostToolUse, Stop hooks, memory-persistence, strategic-compact
 - **MCP Configs**: GitHub, Supabase, Vercel, Railway
 
 ### Subagent Collections
@@ -63,8 +63,8 @@ Last updated: 2026-01-21
 | Platform | Description | URL |
 |----------|-------------|-----|
 | **Skills.sh** | Vercel-hosted skills directory, 24K+ installs top skills | [skills.sh](https://skills.sh) |
-| **Anthropic Skills** | Official skills (docx, pdf, xlsx, pptx) | [github.com/anthropics/skills](https://github.com/anthropics/skills) |
-| **Vercel Skills** | React best practices, web design | [github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
+| **Anthropic Skills** | Official skills (16 skills) | [github.com/anthropics/skills](https://github.com/anthropics/skills) |
+| **Vercel Skills** | React best practices, web design, claude.ai | [github.com/vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) |
 
 ### Top Skills by Installs
 
@@ -73,6 +73,50 @@ Last updated: 2026-01-21
 | react-best-practices | 24.9K | 40+ React/Next.js optimization rules |
 | web-design-guidelines | 18.7K | Web design patterns & accessibility |
 | remotion-best-practices | 1.7K | Video generation with Remotion |
+
+### Local Catalog Skills (catalog/skills/)
+
+#### Anthropic Skills (15)
+
+| Skill | Description | Features |
+|-------|-------------|----------|
+| **algorithmic-art** | Генерация алгоритмического искусства | JS templates, HTML viewer |
+| **brand-guidelines** | Работа с брендбуками | Style guides |
+| **canvas-design** | Canvas-based дизайн | 50+ шрифтов (.ttf) |
+| **doc-coauthoring** | Совместное редактирование документов | Collaboration patterns |
+| **docx** | Word документы | OOXML schemas, docx-js, Python scripts |
+| **frontend-design** | Frontend дизайн паттерны | UI/UX guidelines |
+| **internal-comms** | Внутренние коммуникации | 4 примера (newsletter, FAQ, updates) |
+| **mcp-builder** | Создание MCP серверов | Python/Node templates, evaluation |
+| **pdf** | PDF генерация и формы | 8 Python scripts, form filling |
+| **pptx** | PowerPoint презентации | html2pptx, OOXML, thumbnails |
+| **skill-creator** | Создание новых skills | Templates, validation |
+| **theme-factory** | Темы оформления | 10 готовых тем (arctic, botanical, etc.) |
+| **web-artifacts-builder** | Сборка веб-артефактов | shadcn components, bundler |
+| **webapp-testing** | Тестирование веб-приложений | Playwright, automation examples |
+| **xlsx** | Excel spreadsheets | Recalc formulas, Python |
+
+#### Vercel Skills (3)
+
+| Skill | Description | Features |
+|-------|-------------|----------|
+| **react-best-practices** | React/Next.js оптимизация | 40+ правил в 7 категориях |
+| **web-design-guidelines** | Web design patterns | Accessibility, responsive |
+| **claude.ai** | Деплой на Vercel | claimable deploy script |
+
+#### everything-claude-code Skills (9)
+
+| Skill | Description |
+|-------|-------------|
+| **backend-patterns** | Backend architecture patterns |
+| **coding-standards** | Coding style & conventions |
+| **frontend-patterns** | Frontend architecture patterns |
+| **clickhouse-io** | ClickHouse database patterns |
+| **continuous-learning** | Continuous learning methodology |
+| **eval-harness** | Evaluation framework |
+| **strategic-compact** | Strategic context compaction |
+| **verification-loop** | Verification loop patterns |
+| **project-guidelines-example** | Project guidelines template |
 
 ### Plugin Collections
 
