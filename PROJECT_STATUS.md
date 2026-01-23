@@ -37,7 +37,7 @@
 - [ ] Phase 4: Customize prompts for personal style
 
 ### IN PROGRESS
-- [ ] Phase 3: Test /implement command
+- [ ] Phase 4: Iterate based on usage
 
 ### DONE
 - [x] Research agent ecosystem (100+ repos analyzed)
@@ -49,6 +49,7 @@
 - [x] Phase 2: Install selected agents to ~/.claude/agents/ (19 agents installed)
 - [x] Phase 2: Test agents on real tasks (see AGENT_TESTS.md)
 - [x] Phase 3: Install shinpr/claude-code-workflows plugin (see PLUGIN_INSTALLATION.md)
+- [x] Phase 3: Test /implement command (see IMPLEMENT_TEST.md)
 
 ---
 
@@ -72,12 +73,12 @@ Tasks:
 3. ✅ Iterate based on results
 
 ### Phase 3: Workflows
-**Status:** In Progress
+**Status:** Complete ✅
 
 Tasks:
 1. ✅ Install shinpr/claude-code-workflows plugin (see PLUGIN_INSTALLATION.md)
-2. Try /implement on one project
-3. Evaluate structured development approach
+2. ✅ Try /implement on one project (see IMPLEMENT_TEST.md)
+3. ✅ Evaluate structured development approach
 
 ### Phase 4: Iteration (Ongoing)
 **Status:** Pending
