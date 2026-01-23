@@ -30,6 +30,7 @@
 ## Kanban
 
 ### TODO
+- [ ] Execute iteration cycle quarterly
 - [ ] Phase 3: Install shinpr/claude-code-workflows plugin
 - [ ] Phase 3: Test /implement command on one project
 - [ ] Phase 4: Add custom agents based on experience
@@ -37,7 +38,7 @@
 - [ ] Phase 4: Customize prompts for personal style
 
 ### IN PROGRESS
-- [ ] Phase 4: Iterate based on usage
+(none)
 
 ### DONE
 - [x] Research agent ecosystem (100+ repos analyzed)
@@ -50,6 +51,7 @@
 - [x] Phase 2: Test agents on real tasks (see AGENT_TESTS.md)
 - [x] Phase 3: Install shinpr/claude-code-workflows plugin (see PLUGIN_INSTALLATION.md)
 - [x] Phase 3: Test /implement command (see IMPLEMENT_TEST.md)
+- [x] Phase 4: Create iteration guidelines (see ITERATION_GUIDE.md)
 
 ---
 
@@ -81,13 +83,13 @@ Tasks:
 3. ✅ Evaluate structured development approach
 
 ### Phase 4: Iteration (Ongoing)
-**Status:** Pending
+**Status:** Guidelines Complete ✅
 
 Tasks:
-1. Add new agents as needed
-2. Remove unused ones
-3. Customize prompts
-4. Share learnings
+1. ✅ Add new agents as needed (see ITERATION_GUIDE.md)
+2. ✅ Remove unused ones (see ITERATION_GUIDE.md)
+3. ✅ Customize prompts (see ITERATION_GUIDE.md)
+4. ✅ Share learnings (documentation complete)
 
 ---
 
