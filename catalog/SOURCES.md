@@ -2,7 +2,7 @@
 
 Comprehensive catalog of Claude Code agent repositories, workflows, and skills.
 
-Last updated: 2025-01-20
+Last updated: 2026-01-26
 
 ---
 
@@ -426,6 +426,7 @@ model: sonnet  # or opus, haiku, inherit
 ### Tools
 - [SubAgents Directory](https://subagents.app)
 - [Skills Marketplace](https://skills.sh) (also skillsmp.com)
+- [Claude Code Templates](https://www.aitmpl.com) - Ready-to-use agents, skills, and components with cloud sandbox execution
 
 ---
 
@@ -467,6 +468,7 @@ cp -r catalog/skills/anthropic/mcp-builder /path/to/project/.claude/skills/
 | Vercel Skills | github.com/vercel-labs/agent-skills | Official Vercel skills |
 | Anthropic Skills | github.com/anthropics/skills | Official Anthropic skills |
 | Skills Marketplace | skills.sh | Community skill directory |
+| Claude Code Templates | aitmpl.com | Components with cloud sandbox (E2B, Cloudflare, Docker) |
 
 ### Creating Custom Skills
 
