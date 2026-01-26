@@ -418,6 +418,7 @@ model: sonnet  # or opus, haiku, inherit
 - [Claude Code Subagents Docs](https://code.claude.com/docs/en/sub-agents)
 - [Claude Code Skills Docs](https://code.claude.com/docs/en/skills)
 - [Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)
+- [Swarm Orchestration Skill](https://gist.github.com/kieranklaassen/4f2aba89594a4aea4ad64d753984b2ea) - Complete guide to multi-agent coordination with TeammateTool, Task system, and orchestration patterns
 
 ### Community
 - [GitHub Topic: claudecode-subagents](https://github.com/topics/claudecode-subagents)
